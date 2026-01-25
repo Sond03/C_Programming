@@ -1,8 +1,6 @@
 #include <stdio.h>
-/* Exercise 1-3. Modify the temperature conversion program to print a heading above the table */
 
-// Write a program to print the corresponding Celsius to Fahrenheit table.
-
+// Exercise 1-4
 void fahrToCels(){
     float fahr, celsius;
     float lower, upper, step;
@@ -18,6 +16,7 @@ void fahrToCels(){
     }
 }
 
+// Exercise 1-3
 void celsToFahr(){
     float fahr, celsius;
     float lower, upper, step;
@@ -34,15 +33,19 @@ void celsToFahr(){
     printf("\n");
 }
 
-int main()
-{
+// Exercise 1-5
+void celsToFahrReverse(){
+    printf("%3s │ %6s\n", "Celsius", "Fahrenheit" );
+    printf              ("--------│-----------\n");
+    int fahr = 300;
+    for (; fahr >= 0; fahr = fahr - 20)
+        printf("%7d │ %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
+    printf("\n");
+}
+
+int main(){
     fahrToCels();
     celsToFahr();
+    celsToFahrReverse();
     return 0;
-    // more efficient way of doing it inside the first loop
-    // {
-    //     int fahr;
-    //     for (fahr = 0; fahr <= 300; fahr = fahr + 20)
-    //         printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
-    // }
 }
