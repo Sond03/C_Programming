@@ -1,0 +1,8 @@
+CompileFlags:
+  Add: 
+    - "-Iinclude"
+    - "-x"
+    - "c"
+    - "--driver-mode=gcc" 
+
+
