@@ -1,4 +1,7 @@
 #include <stdio.h>
+int CelsConversion(int fahr){
+    return (fahr - 32) * 5/9;
+}
 
 // Exercise 1-4
 void fahrToCels(){
@@ -10,7 +13,7 @@ void fahrToCels(){
     fahr = lower;
     printf("%s | %s\n", "Fahrenheit", "Celsius" );
     while (celsius <= upper) {
-        celsius = (fahr - 32) * 5/9;
+        celsius = CelsConversion(fahr);
         printf("%10.0f | %6.1f\n", fahr, celsius);
         fahr = fahr + step;
     }
